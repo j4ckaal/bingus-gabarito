@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Prompt:wght@400;700&display=swap');
+
+*
+{
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  background: #f7f7f7;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+
+
+
+
+.title
+{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.title::before
+{
+  content: '';
+  position: absolute;
+  width: 19rem;
+  height: 19rem;
+  background: linear-gradient(#00fff5, #30a2ff);
+  animation: animate 4s linear infinite;
+}
+.title::after
+{
+  content: '';
+  position: absolute;
+  background: #f7f7f7;
+}
+@keyframes animate
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(350deg);
+  }
+}
+.title h2
+{
+  color: #0e0e0e;
+  font-weight: 500;
+  font-style: normal;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 10;
+}
+
+@media (max-width: 394px) {
+  .title {
+    width: 6rem;
+    height: 4.5rem;
+    border-radius: 10px;
+  }
+  .title::after {
+    inset: 2px;
+    border-radius: 8px;
+  }
+  .title h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 395px) and (max-width: 529px) {
+  .title {
+    width: 8rem;
+    height: 6rem;
+    border-radius: 13px;
+  }
+  .title::after {
+    inset: 3px;
+    border-radius: 11px;
+  }
+  .title h2 {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 530px) {
+  .title {
+    width: 12rem;
+    height: 9rem;
+    border-radius: 20px;
+  }
+  .title::after {
+    inset: 4px;
+    border-radius: 16px;
+  }
+  .title h2 {
+    font-size: 3em;
+  }
+}
+
+
+
+
+
+
+.btn-class {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 8rem;
+}
+
+
+
+@media (max-width: 394px) {
+  .btn-class {
+    padding-top: 4rem;
+  }
+}
+
+@media (min-width: 395px) and (max-width: 529px) {
+  .btn-class {
+    padding-top: 5.34rem;
+  }
+}
+
+@media (min-width: 530px) {
+  .btn-class {
+    padding-top: 8rem;
+  }
+}
+
+
+
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: default;
+  background: #eaeaea;
+  color: #000000;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+input:checked + label {
+  transition: background 0.3s;
+  background: #30a2ff;
+  color: #ffffff;
+}
+
+input:not(:checked) + label {
+  transition: background 0.3s;
+  background: #eaeaea;
+  color: #000000;
+}
+
+.column-2, .column-3, .column-4,
+.column-5, .column-6, .column-7,
+.column-8, .column-9, .column-10 {
+  position: relative;
+  padding-left: 10px;
+}
+
+.column-6, .column-7, .column-8, .column-9, .column-10 {
+  margin-bottom: auto;
+}
+
+
+
+
+
+@media (max-width: 394px) {
+  label {
+    width: 22px;
+    height: 22px;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 395px) and (max-width: 529px) {
+  label {
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 530px) and (max-width: 629px) {
+  label {
+    width: 43px;
+    height: 43px;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 630px) {
+  label {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2.5em;
+  }
+}
